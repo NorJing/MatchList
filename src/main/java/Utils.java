@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by dongyan on 21/06/17.
+ * Created by Percy on 21/06/17.
  */
 public class Utils {
     public static Date parseDate(String date){

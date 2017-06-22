@@ -62,4 +62,16 @@ public class MatchListTest {
         String output = matchList.toString();
         assertEquals(outputExpect, output);
     }
+
+    @Test
+    public void testMatchListAdd(){
+        MatchList matchList = new MatchList();
+        Match match = new Match(10, "home10", "away10", "2017/10/10 10:10:00");
+        matchList.add(match);
+        assertEquals("home10", match.getHomeTeam());
+        assertEquals("away10", match.getAwayTeam());
+        assertEquals(10, match.getMatchId());
+        assertEquals("2017/10/10 10:10:00", Utils.changeDateToStringFormat(match.getMatchDate()));
+        assertEquals(match, matchList.getMatchList().get(0));
+    }
 }

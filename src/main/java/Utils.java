@@ -13,4 +13,13 @@ public class Utils {
             return null;
         }
     }
+
+    public static String changeDateToStringFormat(Date date){
+        try {
+            return new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(date);
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

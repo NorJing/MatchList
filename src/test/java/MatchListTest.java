@@ -3,7 +3,10 @@
  */
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertThat;
 import org.junit.Test;
+import static org.hamcrest.Matchers.is;
 
 public class MatchListTest {
 
@@ -73,5 +76,7 @@ public class MatchListTest {
         assertEquals(10, match.getMatchId());
         assertEquals("2017/10/10 10:10:00", Utils.changeDateToStringFormat(match.getMatchDate()));
         assertEquals(match, matchList.getMatchList().get(0));
+        assertSame(match, matchList.getMatchList().get(0));
+        assertThat("match is the match", match, is(matchList.getMatchList().get(0)));
     }
 }
